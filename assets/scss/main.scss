@@ -1,0 +1,288 @@
+/* assets/scss/main.scss */
+
+/* Reset default styles to prevent bold text */
+*,
+*:before,
+*:after {
+  font-family: Arial, sans-serif; /* Test with Arial */
+  font-weight: 400 !important;
+  font-style: normal !important;
+}
+.header {
+  background-color: #f9f9fa;
+  font-style: normal !important;
+  font-family: 'Yekan Bakh', sans-serif;
+  display: flex;
+  align-content: center;
+  padding: 8px 20px;
+  direction: rtl;
+  height: 90px;
+  position: relative;
+  box-shadow: 0px 2px 2px 0px #00000014;
+
+  .header-content {
+    font-style: normal !important;
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    color: #e2e8f0;
+    flex-grow: 1;
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+
+      .nav-item {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        color: #0A2A51;
+        text-decoration: none;
+        font-style: normal !important;
+        font-size: 15px;
+        font-weight: 400 !important; /* Ensure non-bold */
+        transition: color 0.3s ease;
+
+        .custom-icon {
+          width: 15px;
+          height: 15px;
+          filter: brightness(0) saturate(100%) hue-rotate(330deg);
+          transition: filter 0.3s ease;
+        }
+
+        span {
+          font-weight: 400 !important; /* Ensure span is non-bold */
+        }
+
+        &:hover {
+          color: #e91e63;
+
+          .custom-icon {
+            filter: brightness(0) saturate(100%) hue-rotate(340deg);
+          }
+        }
+      }
+    }
+
+    .separator {
+      font-size: 16px;
+      color: #e2e8f0;
+    }
+  }
+
+  .login-button {
+    background-color: #E20054;
+    width: fit-content;
+    height: 45px;
+    padding: 10px 30px;
+    color: #fff;
+    border: none;
+    border-radius: 16px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: absolute;
+    left: 100px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    img {
+      margin-top: 4px;
+    }
+
+    &:hover {
+      background-color: #E20054;
+    }
+
+    .custom-icon {
+      width: 15px;
+      height: 15px;
+    }
+  }
+}
+
+/* Footer styles (unchanged unless you need modifications) */
+.footer {
+  width: 100%;
+  font-family: 'Yekan Bakh', sans-serif;
+  max-width: 1440px;
+  margin: 0 auto;
+  margin-top: 1178px;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  box-shadow: 0px -2px 2px 0px rgba(0, 0, 0, 0.04);
+  background-color: #fff;
+  direction: rtl;
+
+  background-color: #f8fafc;
+  border-top: 1px solid #e5e7eb;
+
+  .max-w-6xl {
+    padding: 50px 0;
+    
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    text-align: right;
+background-color:#FFFFFF;
+;
+    grid-auto-rows: minmax(150px, auto);
+
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 640px) {
+      grid-template-columns: 1fr;
+    }
+
+    h3 {
+      font-size: 16px;
+      color: #333;
+      gap: 12px;
+      font-weight: bold !important;
+    }
+
+    ul {
+      margin-block-start: 0 !important;
+      margin-block-end: 0 !important;
+      padding-inline-start: 0 !important;
+
+      li {
+        list-style: none;
+        padding-bottom: 10px;
+
+        a {
+          font-size: 14px;
+          color: #666;
+          text-decoration: none;
+          font-weight: 400 !important; /* Ensure non-bold */
+          transition: color 0.3s ease;
+
+          &:hover {
+            color: #e63946;
+          }
+
+          &.text-red-500 {
+            color: #e63946;
+            &:hover {
+              color: #d00000;
+            }
+          }
+
+          .custom-icon {
+            width: 16px;
+            height: 16px;
+            margin-left: 5px;
+          }
+
+          &.hover\:text-blue-500:hover .custom-icon {
+            filter: brightness(0) saturate(100%) invert(47%) sepia(98%) saturate(2453%) hue-rotate(200deg) brightness(100%) contrast(101%);
+          }
+
+          &.hover\:text-pink-500:hover .custom-icon {
+            filter: brightness(0) saturate(100%) invert(47%) sepia(98%) saturate(2453%) hue-rotate(300deg) brightness(90%) contrast(101%);
+          }
+
+          &.hover\:text-blue-700:hover .custom-icon {
+            filter: brightness(0) saturate(100%) invert(47%) sepia(98%) saturate(2453%) hue-rotate(180deg) brightness(90%) contrast(101%);
+          }
+        }
+      }
+    }
+
+    .text-sm.text-gray-600 {
+      font-size: 14px;
+      color: #666;
+    }
+
+    .seven {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100%;
+      text-align: center;
+      height: 100%;
+      margin-top: 50px;
+    }
+  }
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+ 
+    align-items: center;
+    gap: 4px;
+    width: 100%;
+    padding: 10px;
+
+    .flex-1 {
+      flex: 1;
+    }
+
+    .flex-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      flex: 0 0 auto;
+
+      p {
+        font-family: 'Yekan Bakh', sans-serif;
+        font-size: 13px;
+        line-height: 24px;
+        letter-spacing: 0%;
+        text-align: center;
+        font-weight: 400; /* Ensure non-bold */
+      }
+
+      .footer-bottom-icons {
+        margin: 10px 10px;
+      }
+
+      .flex {
+        .social-icon {
+          width: 24px;
+          height: 24px;
+          transition: transform 0.3s ease;
+
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+
+    .badges-section {
+      display: flex;
+      gap: 20px;
+      justify-self: center;
+      height: 100px;
+
+      .social-icon {
+        width: 55px !important;
+        height: 70px !important;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+
+    .col {
+      flex: 1;
+      font-size: 12px !important;
+      color: #666 !important;
+      font-weight: 400 !important; /* Ensure non-bold */
+    }
+  }
+}

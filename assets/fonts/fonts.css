@@ -1,0 +1,7 @@
+@font-face {
+    font-family: 'Yekan Bakh';
+    src: url(' ~/assets/fonts/YekanBakh-Bold/thiner.woff2') format('woff2'),
+         url('~/assets/fonts/YekanBakh-Bold/YekanBakh.woff') format('woff');
+    font-weight: lighter;
+    font-style: normal;
+}

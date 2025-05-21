@@ -14,8 +14,9 @@ type LazyComponent<T> = (T & DefineComponent<HydrationStrategies, {}, {}, {}, {}
 interface _GlobalComponents {
       'Footer': typeof import("../components/Footer.vue")['default']
     'Header': typeof import("../components/Header.vue")['default']
+    'MainComponent': typeof import("../components/MainComponent.vue")['default']
     'ProductCard': typeof import("../components/ProductCard.vue")['default']
-    'SideBarMenu': typeof import("../components/SideBarMenu.vue")['default']
+    'Sidebar': typeof import("../components/Sidebar.vue")['default']
     'NuxtWelcome': typeof import("../node_modules/nuxt/dist/app/components/welcome.vue")['default']
     'NuxtLayout': typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']
     'NuxtErrorBoundary': typeof import("../node_modules/nuxt/dist/app/components/nuxt-error-boundary.vue")['default']
@@ -42,8 +43,9 @@ interface _GlobalComponents {
     'NuxtRouteAnnouncer': IslandComponent<typeof import("../node_modules/nuxt/dist/app/components/server-placeholder")['default']>
       'LazyFooter': LazyComponent<typeof import("../components/Footer.vue")['default']>
     'LazyHeader': LazyComponent<typeof import("../components/Header.vue")['default']>
+    'LazyMainComponent': LazyComponent<typeof import("../components/MainComponent.vue")['default']>
     'LazyProductCard': LazyComponent<typeof import("../components/ProductCard.vue")['default']>
-    'LazySideBarMenu': LazyComponent<typeof import("../components/SideBarMenu.vue")['default']>
+    'LazySidebar': LazyComponent<typeof import("../components/Sidebar.vue")['default']>
     'LazyNuxtWelcome': LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/welcome.vue")['default']>
     'LazyNuxtLayout': LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']>
     'LazyNuxtErrorBoundary': LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-error-boundary.vue")['default']>
@@ -76,8 +78,9 @@ declare module 'vue' {
 
 export const Footer: typeof import("../components/Footer.vue")['default']
 export const Header: typeof import("../components/Header.vue")['default']
+export const MainComponent: typeof import("../components/MainComponent.vue")['default']
 export const ProductCard: typeof import("../components/ProductCard.vue")['default']
-export const SideBarMenu: typeof import("../components/SideBarMenu.vue")['default']
+export const Sidebar: typeof import("../components/Sidebar.vue")['default']
 export const NuxtWelcome: typeof import("../node_modules/nuxt/dist/app/components/welcome.vue")['default']
 export const NuxtLayout: typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']
 export const NuxtErrorBoundary: typeof import("../node_modules/nuxt/dist/app/components/nuxt-error-boundary.vue")['default']
@@ -104,8 +107,9 @@ export const NuxtIsland: typeof import("../node_modules/nuxt/dist/app/components
 export const NuxtRouteAnnouncer: IslandComponent<typeof import("../node_modules/nuxt/dist/app/components/server-placeholder")['default']>
 export const LazyFooter: LazyComponent<typeof import("../components/Footer.vue")['default']>
 export const LazyHeader: LazyComponent<typeof import("../components/Header.vue")['default']>
+export const LazyMainComponent: LazyComponent<typeof import("../components/MainComponent.vue")['default']>
 export const LazyProductCard: LazyComponent<typeof import("../components/ProductCard.vue")['default']>
-export const LazySideBarMenu: LazyComponent<typeof import("../components/SideBarMenu.vue")['default']>
+export const LazySidebar: LazyComponent<typeof import("../components/Sidebar.vue")['default']>
 export const LazyNuxtWelcome: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/welcome.vue")['default']>
 export const LazyNuxtLayout: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']>
 export const LazyNuxtErrorBoundary: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-error-boundary.vue")['default']>

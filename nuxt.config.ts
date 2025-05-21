@@ -3,7 +3,7 @@ import viteTsConfigPaths from 'vite-tsconfig-paths';
 
 export default defineNuxtConfig({
   compatibilityDate: '2025-05-15',
-  devtools: { enabled: true },
+  devtools: false,
   css: [
     '@fortawesome/fontawesome-free/css/all.min.css',
     '@/assets/fonts/fonts.css',
@@ -17,21 +17,24 @@ export default defineNuxtConfig({
     },
   },
   components: true,
- 
   plugins: [],
-  
+  build: {
+    transpile: ['vue3-image-zoom'],
+  },
   vite: {
     plugins: [
       viteTsConfigPaths({
         root: './',
       }),
+      viteTsConfigPaths({}) as any
     ],
     server: {
       fs: {
         allow: [
-          '/home/sahar-mirzabaki/Desktop/Simple_Store_Using_Vue.js-Nuxt.js',
-          '/home/sahar-mirzabaki/node_modules/@fortawesome/fontawesome-free/webfonts',
-        ],
+          '.', // project root
+          '/home/sahar-mirzabaki/Desktop/hhhhh/Simple_Store_Using_Vue.js-Nuxt.js',
+          'node_modules'
+        ]
       },
     },
     assetsInclude: ['**/*.woff', '**/*.ttf'],

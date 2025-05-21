@@ -6,14 +6,13 @@ type Decorate<T extends Record<string, any>> = { [K in keyof T as K extends stri
 type InjectionType<A extends Plugin> = A extends {default: Plugin<infer T>} ? Decorate<T> : unknown
 
 type NuxtAppInjections = 
-  InjectionType<typeof import("../../../../../node_modules/@nuxt/devtools/dist/runtime/plugins/devtools.server.js")> &
-  InjectionType<typeof import("../../../../../node_modules/@nuxt/devtools/dist/runtime/plugins/devtools.client.js")>
+  InjectionType<typeof import("../../plugins/view-image-zoomer.client.mjs")>
 
 declare module '#app' {
   interface NuxtApp extends NuxtAppInjections { }
 
   interface NuxtAppLiterals {
-    pluginName: 'vue-devtools-client' | 'nuxt:global-components'
+    pluginName: 'nuxt:global-components'
   }
 }
 

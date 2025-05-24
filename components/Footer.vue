@@ -8,13 +8,7 @@
       <div class="social-media">
         <h3>شبکه‌های اجتماعی</h3>
         <ul>
-          <li>
-            <a href="#" class="flex items-center justify-end gap-2 hover-blue">
-             
-              <span>تلگرام</span>
-               <img src="~/assets/icons/footerIcons/telegram(1).png" alt="Telegram" class="custom-icon" />
-            </a>
-          </li>
+         
           <li>
             <a href="#" class="flex items-center justify-end gap-2 hover-pink">
              
@@ -22,13 +16,24 @@
                <img src="~/assets/icons/footerIcons/instagram(1).png" alt="Instagram" class="custom-icon" />
             </a>
           </li>
-          <li>
-            <a href="#" class="flex items-center justify-end gap-2 hover-dark-blue">
-             
-              <span>لینکدین</span>
-               <img src="~/assets/icons/footerIcons/Vector.png" alt="LinkedIn" class="custom-icon" />
+
+           <li>
+            <a href="#" class="flex items-center justify-end gap-2 hover-pink">
+           <span>تلگرام</span>
+           
+               <img src="~/assets/icons/footerIcons/telegram(1).png" alt="Telegram" class="custom-icon" />
             </a>
           </li>
+         
+          <li>
+           
+              <a href="#" class="flex items-center justify-end gap-2 hover-pink">
+              <span>لینکدین</span>
+               <img src="~/assets/icons/footerIcons/Vector.png" alt="LinkedIn" class="custom-icon" />
+                 </a>
+                </li>
+          
+         
         </ul>
       </div>
       <!-- Site Guide -->

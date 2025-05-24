@@ -1,30 +1,37 @@
-<!-- layouts/default.vue -->
 <template>
   <div class="layout-container">
     <Header />
+     <Breadcrumb/>
     <div class="main-content">
-      <div class="page-content">
-     <!--    <MainComponent :products="products" /> -->
-        <NuxtPage />
-      </div>
-      <Sidebar />
+      <!-- Conditionally render page-content and Sidebar only if not on /product/* -->
+      <template v-if="!isProductRoute">
+        <div class="page-content">
+          <FilterSidebar />
+          <NuxtPage />
+        </div>
+        <ClientOnly>
+          <Sidebar />
+        </ClientOnly>
+      </template>
+      <!-- Render only NuxtPage for /product/* routes -->
+      <NuxtPage v-else />
     </div>
     <Footer />
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
+import { computed } from 'vue'
+import { useRoute } from 'vue-router'
+
+import FilterSidebar from '~/components/FilterSidebar.vue'
 import Sidebar from '~/components/Sidebar.vue'
 import Header from '~/components/Header.vue'
-import MainComponent from '~/components/MainComponent.vue'
 import Footer from '~/components/Footer.vue'
+import Breadcrumb from '~/components/Breadcrumb'
 
-const products = [
-  { id: 1, name: 'درب بازویی اتوماتیک', price: 150000 },
-  { id: 2, name: 'درب بازویی اتوماتیک', price: 250000 },
-  { id: 3, name: 'درب بازویی اتوماتیک', price: 300000 },
-  { id: 4, name: 'درب بازویی اتوماتیک', price: 200000 },
-  { id: 5, name: 'درب بازویی اتوماتیک', price: 350000 },
-  { id: 6, name: 'درب بازویی اتوماتیک', price: 400000 },
-]
+
+// Determine if the current route is a product route
+const route = useRoute()
+const isProductRoute = computed(() => route.path.startsWith('/product/'))
 </script>

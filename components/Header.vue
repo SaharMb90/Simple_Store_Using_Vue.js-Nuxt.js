@@ -1,6 +1,6 @@
-<!-- components/Header.vue -->
 <template>
   <header class="header">
+    <!-- Hamburger menu button (right side) -->
     <button class="menu-toggle" @click="toggleMenu">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -17,34 +17,45 @@
         />
       </svg>
     </button>
+    <!-- Header content (center) -->
     <div class="header-content">
       <nav class="nav-links" :class="{ 'nav-open': isMenuOpen }">
-        <a href="#" class="nav-item">
-          <img src="~/assets/icons/teacher.png" alt="Shopping Cart" class="custom-icon" />
-          <span>لیست محصولات</span>
-        </a>
-        <a href="#" class="nav-item">
-          <img src="~/assets/icons/cup.png" alt="Headset" class="custom-icon" />
+      <NuxtLink  to="/" class="nav-item">
+         <img src="~/assets/icons/teacher.png" alt="Shopping Cart" class="custom-icon" />
+        <span>لیست محصولات</span>
+        
+        </NuxtLink>
+        <NuxtLink  to="/product/1" class="nav-item">
+         <img src="~/assets/icons/cup.png" alt="Headset" class="custom-icon" />
           <span>دریافت مشاوره</span>
-        </a>
-        <a href="#" class="nav-item">
-          <img src="~/assets/icons/user.png" alt="User" class="custom-icon" />
+        </NuxtLink>
+        <NuxtLink to="/" class="nav-item">
+         <img src="~/assets/icons/user.png" alt="User" class="custom-icon" />
           <span>سوالات متداول</span>
-        </a>
-        <a href="#" class="nav-item">
+        
+        </NuxtLink>
+        
+        <NuxtLink to="/" class="nav-item">
           <img src="~/assets/icons/phone.png" alt="Phone" class="custom-icon" />
           <span>تماس با ما</span>
-        </a>
+        
+        </NuxtLink>
         <button class="login-button mobile-login">
           تماس
-          <img src="~/assets/icons/loginButton.png" alt="Phone" class="custom-icon" />
+          
         </button>
       </nav>
       <span class="separator">•</span>
     </div>
+    <!-- Desktop login button (left side, hidden on mobile) -->
     <button class="login-button desktop-login">
       تماس
       <img src="~/assets/icons/loginButton.png" alt="Phone" class="custom-icon" />
+    </button>
+    <!-- Mobile login/contact button (left side on mobile) -->
+    <button class="mobile-login-button" @click="handleLogin">
+    
+       <img src="~/assets/icons/Vector.png" alt="Phone" class="custom-icon" />
     </button>
   </header>
 </template>
@@ -56,5 +67,9 @@ const isMenuOpen = ref(false)
 
 const toggleMenu = () => {
   isMenuOpen.value = !isMenuOpen.value
+}
+
+const handleLogin = () => {
+  console.log('Login/Contact button clicked')
 }
 </script>

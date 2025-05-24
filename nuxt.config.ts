@@ -5,6 +5,7 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-05-15',
   devtools: false,
   css: [
+    '@vueform/toggle/themes/default.css',
     '@fortawesome/fontawesome-free/css/all.min.css',
     '@/assets/fonts/fonts.css',
     '@/assets/scss/main.scss',
@@ -19,7 +20,8 @@ export default defineNuxtConfig({
   components: true,
   plugins: [],
   build: {
-    transpile: ['vue3-image-zoom'],
+    transpile: ['vue-easy-lightbox','@vueform/toggle'],
+   
   },
   vite: {
     plugins: [
@@ -33,6 +35,8 @@ export default defineNuxtConfig({
         allow: [
           '.', // project root
           '/home/sahar-mirzabaki/Desktop/hhhhh/Simple_Store_Using_Vue.js-Nuxt.js',
+          '/home/sahar-mirzabaki/Desktop/hhhhh',
+          '/home/sahar-mirzabaki/Desktop/hhhhh/Simple_Store_Using_Vue.js-Nuxt.js/node_modules',
           'node_modules'
         ]
       },
